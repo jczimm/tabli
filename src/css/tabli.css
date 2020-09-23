@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
 }
+
 html {
     height: 100%;
     font-size: 1rem;
 }
+
 .popup-html {
     width: 450px;
     height: 600px;
 }
+
 body {
     /* background: white; */
     font-family: sans-serif;
@@ -20,36 +23,44 @@ body {
     height: 100%;
     width: 100%;
 }
+
 hr {
     margin-top: 0in;
     padding: 0px;
 }
+
 ul {
     margin-top: 0.05in;
     padding-left: 20px;
 }
+
 p {
     margin-top: 4px;
     margin-bottom: 4px;
 }
+
 // For dialogs:
 label,
 input {
     display: block;
 }
+
 fieldset {
     padding: 0;
     border: 0;
 }
+
 .save-form label {
     padding: 5px;
     font-weight: bold;
 }
+
 .tabli-menu {
     font-size: 1.167rem;
     font-weight: 400;
     line-height: 1.42;
 }
+
 .main-container {
     height: 100%;
     width: 100%;
@@ -64,6 +75,7 @@ fieldset {
     font-family: sans-serif;
     background-color: inherit;
 }
+
 .card-header {
     padding-left: 16px;
     padding-right: 16px;
@@ -71,21 +83,25 @@ fieldset {
     padding-top: 8px;
     font-size: 1.333rem;
 }
+
 .card-title {
     font-weight: bold;
     font-size: 1.667rem;
     padding-bottom: 0px;
 }
+
 .card-subtitle {
     font-size: 1.167rem;
     /* color: rgba(0, 0, 0, 0.541176); */
 }
+
 .card-body {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 0px;
     font-size: 1.167rem;
 }
+
 a.card-link {
     text-decoration: none;
     color: #4285f4;
@@ -95,16 +111,20 @@ a.card-link {
     margin: 8px;
     min-width: 60px;
 }
+
 .inline-flex {
     display: inline-flex;
     align-items: center;
 }
+
 .inline-block {
     display: inline-block;
 }
+
 .no-top-border {
     border-bottom: 4px;
 }
+
 .search-input {
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -118,17 +138,21 @@ a.card-link {
     padding: 1px;
     font-size: 12px;
 }
+
 input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: searchfield-cancel-button;
     margin-right: 5px;
 }
+
 /* GRRRRRR. @#!@#$ CSS */
 .popout-button {
     line-height: 1;
 }
+
 .preferences-form input[type='checkbox'] {
     margin: 8px;
 }
+
 button,
 input,
 input[type='search'],
@@ -136,3 +160,141 @@ input[type='checkbox'] {
     background-color: inherit;
     color: inherit;
 }
+
+/* BEGIN CUSTOM STYLING */
+/* FIXME: move the component styling into src/ts/components/cssStyles.ts */
+
+:root {
+    --fg: black;
+    --bg: white;
+    --bg-alt: rgb(235, 233, 235);
+    --bg-alt-2: #979797;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --fg: white;
+        --bg: #333;
+        --bg-alt: #444;
+        --bg-alt-2: #979797;
+    }
+
+    .css-wy2io2 {
+        box-shadow: none !important;
+    }
+}
+
+
+@media screen and (min-width: 80em) {
+
+    /* not an exact measure */
+    .css-1ua8c44 {
+        margin: 0 0.5em;
+    }
+
+    .css-1isemmb {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+body {
+    font-family: "system-ui", sans-serif !important;
+    background-color: var(--bg) !important;
+}
+
+.css-169u2ed {
+    display: none !important;
+}
+
+.tabItemHoverContainer>.css-p4f3z:first-child>.css-17xrvlo {
+    display: none;
+}
+
+.css-gb7lku {
+    padding: 0 !important;
+}
+
+.css-15n0jmd {
+    padding: 0.5em 1em 0.25em;
+}
+
+/* @media screen and (prefers-color-scheme: dark) {
+  .css-gb7lku {
+    background-color: black;
+    color: black;
+  }
+} */
+
+.css-17rinkv {
+    background-color: var(--bg) !important;
+    color: var(--fg) !important;
+}
+
+.windowHeaderHoverContainer,
+.css-1me9kcx,
+.tabItemHoverContainer:hover,
+.css-1rv2jlc {
+    background-color: var(--bg-alt) !important;
+}
+
+.css-hviam3 {
+    background-color: var(--bg) !important;
+}
+
+.css-4v6unm {
+    fill: var(--fg) !important;
+}
+
+/* begin adapted from edge://extensions page css */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--bg-alt);
+    border: 1px solid rgb(186, 186, 186);
+}
+
+@media (-ms-high-contrast:active) {
+    ::-webkit-scrollbar-thumb {
+        background: ButtonText;
+        forced-color-adjust: none;
+    }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-alt-2);
+}
+
+@media (-ms-high-contrast:active) {
+    ::-webkit-scrollbar-thumb:hover {
+        background: Highlight;
+        forced-color-adjust: none;
+    }
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--bg-alt-2);
+}
+
+@media (-ms-high-contrast:active) {
+    ::-webkit-scrollbar-thumb:active {
+        background: Highlight;
+        forced-color-adjust: none;
+    }
+}
+
+::-webkit-scrollbar-corner {
+    background: none;
+}
+
+/* end adapted from edge://extensions page css */
+
+/* END CUSTOM STYLING */
